@@ -7,10 +7,32 @@ import {Provider} from 'react-redux'
 import {createStore} from 'redux'
 
 const myState = {
-    todo : []
+    todo : [
+        {id:1, name:'buy eggs', desc:'buy eggs from xxx store'}
+    ]
 }
 
 function reducer(state = myState, action){
+    // console.log(action);
+    if(action.type === 'ADD_TODO'){
+        var newTodo = [...state.todo, action.data]
+        return{
+            ...state,
+            todo : newTodo
+        }
+    }
+
+    if(action.type === 'DELETE_TODO'){
+        let {id} = action;
+        const myNewList = state.todo.filter(thatList => {
+            return thatList.id !== id 
+        })
+        return{
+            ...state,
+            todo: myNewList
+        }
+    }
+    
     return state
 }
 

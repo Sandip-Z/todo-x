@@ -1,10 +1,13 @@
 import React from 'react';
 import './App.css';
+import Display from './Components/Display'
+import Fill from './Components/Fill' 
 
 function App() {
   return (
     <div className="App">
-    <p>Hello from the other side.</p>
+    <Display />
+    <Fill />
     </div>
   );
 }
