@@ -8,12 +8,12 @@ class RandomGetApi extends PureComponent{
         super(props);
         this.state = {
             data : undefined,
-            id:1
+            APIid:1
         }
     }
     handleClick = ()=>{
-        var newid = parseInt(this.state.id) + 1;
-        axios.get('https://reqres.in/api/users/' + this.state.id )
+        var newAPIid = parseInt(this.state.APIid) + 1;
+        axios.get('https://reqres.in/api/users/' + this.state.APIid )
         .then(res=>{
             var id = res.data.data.id;
             var name = res.data.data.first_name;
@@ -21,7 +21,7 @@ class RandomGetApi extends PureComponent{
             var obj = {id:id, name:name, desc:desc}
             this.setState({
                 data : obj,
-                id : newid
+                APIid : newAPIid
             });
             this.props.getRequest(this.state.data);
         })
