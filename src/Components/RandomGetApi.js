@@ -8,7 +8,7 @@ class RandomGetApi extends PureComponent{
         super(props);
         this.state = {
             data : undefined,
-            APIid:1
+            APIid: 1
         }
     }
     handleClick = ()=>{
@@ -30,8 +30,8 @@ class RandomGetApi extends PureComponent{
 
     render(){
         return(
-            <div>
-            <button onClick={this.handleClick}>Get Request for 1 todo list</button>
+            <div className="pull-btn-container">
+            <button onClick={this.handleClick} className="pull-btn">+</button>
             </div>
         )
     }

@@ -12,10 +12,49 @@ code {
     monospace;
 }
 
-.container{
+.pull-btn-container{
+  position: absolute;
+  bottom:0px;
+  right:0px;
+  margin:25px;
+}
+
+.pull-btn{
+  padding:15px;
+  border:0px solid inherit;
+  border-radius:5px;
+  /* background-color:rgb(212, 16, 16); */
+  color:rgb(0, 0, 0);
+  font-size:22px;
+  box-shadow: 0px;
+}
+
+.box{
   display: block;
-  margin: auto;
-  width:75%;
-  background-color:rgb(219, 219, 219);
-  padding:25px;
+  margin:15px auto;
+  border:1px solid rgb(247, 232, 232);
+  width:55%;
+  padding:5px;
+  line-height: 1.5em;
+  background-color: rgb(247, 244, 241);
+}
+
+.pull-right{
+  float: right;
+}
+
+.col{
+  /* border:1px solid red; */
+  padding:5px 0px;
+}
+.job-input-field{
+  padding:5px;
+  margin-top:-15px;
+}
+
+.job-POST-field{
+  padding:5px;
+}
+.green{
+  background: green !important;
 }
